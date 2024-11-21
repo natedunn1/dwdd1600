@@ -8,12 +8,18 @@
     <title>Utah Utes - NateDunnSports</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             color: #333;
-            margin: 0;
-            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -69,6 +75,7 @@
         }
 
         main {
+            flex: 1;
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
@@ -77,7 +84,16 @@
         main h1 {
             font-size: 2rem;
             color: #2e3b4e;
-            text-align: center;
+            text-align: left;
+            display: inline-block;
+        }
+
+        main img {
+            float: right;
+            margin: 0 0 15px 15px;
+            max-width: 30%;
+            height: auto;
+            border-radius: 5px;
         }
 
         main p {
@@ -90,6 +106,9 @@
             color: white;
             text-align: center;
             padding: 15px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
         }
 
         footer a {
@@ -112,16 +131,20 @@
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="byu.html">BYU</a></li>
-            <li><a href="UtahUtes.html" class="active">Utah Utes</a></li>
-            <li><a href="UtahJaz.html">Utah Jazz</a></li>
+            <li><a href="utahutes.html" class="active">Utah Utes</a></li>
+            <li><a href="utahjazz.html">Utah Jazz</a></li>
             <li><a href="UtahHockeyClub.html">Utah Hockey Club</a></li>
             <li><a href="RSL.html">RSL</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Utah Utes</h1>
-        <p>Welcome to the Utah Utes Sports page! Here you can find updates on the latest wins, upcoming games, and news about the Utah Utes teams. Stay tuned for more information!</p>
+        <h1>Utah Utes Sports</h1>
+        <img src="images/UtahUtes.png" alt="Utah Utes" loading="lazy">
+        <img src="images/utahutes1.png" alt="Utah Utes 1" loading="lazy">
+        <figcaption>Go Utes!</figcaption>
+          
+        <p>Welcome to the Utah Utes Sports page! Here you can find updates on the latest wins, upcoming games, and news about Utah Utes teams. Stay tuned for more information!</p>
     </main>
 
     <footer>
