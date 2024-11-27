@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name or Company Name">
+    <meta name="description" content="Contact NateDunnSports for inquiries and feedback">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NateDunnSports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            min-height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #007acc;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007acc;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            padding: 10px;
+        }
+
+        nav ul li a.active {
+            background-color: #005b99;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #005b99;
+            border-radius: 5px;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        main h1 {
+            font-size: 2rem;
+            color: #2e3b4e;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 2px solid #007acc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: 700;
+            color: #007acc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .submit-button:hover {
+            background-color: #005b99;
+        }
+
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   <header style="display: flex; align-items: center; justify-content: center;">
+    <img src="images/headerfinal.jpg" alt="Welcome to Utah Sports." style="width: 100px; height: 100px; margin-right: 20px;" class="hero-image">
+    <div>
+        <h1>NateDunnSports</h1>
+        <p>Covering ALL things Utah Sports</p>
+    </div>
+</header>
+    <nav>
+        <ul>
+           <li><a href="home.html">Home</a></li>
+            <li><a href="byu.html">BYU</a></li>
+            <li><a href="UtahUtes.html">Utah Utes</a></li>
+            <li><a href="UtahJazz.html">Utah Jazz</a></li>
+            <li><a href="UtahHockeyClub.html">Utah Hockey Club</a></li>
+            <li><a href="RSL.html">RSL</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Contact Us</h1>
+        <form action="thanks.html" method="get">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </fieldset>
+
+            <fieldset>
+                <legend>Sports Interests</legend>
+                <label for="favorite-team">Favorite Team:</label>
+                <select id="favorite-team" name="favorite-team" required>
+                    <option value="">Select your favorite team</option>
+                    <option value="utah-hockey-club">Utah Hockey Club</option>
+                    <option value="UtahJazz">Utah Jazz</option>
+                    <option value="BYU">BYU Cougars</option>
+                    <option value="UtahUtes">Utah Utes</option>
+                    <option value="RealSaltLake">Real Salt Lake</option>
+                </select>
+
+                <input type="checkbox" id="football" name="interest" value="football">
+                <label for="football">Football</label>
+                <input type="checkbox" id="basketball" name="interest" value="basketball">
+                <label for="basketball">Basketball</label>
+                <input type="checkbox" id="hockey" name="interest" value="hockey">
+                <label for="hockey">Hockey</label>
+                <input type="checkbox" id="soccer" name="interest" value="soccer">
+                <label for="soccer">Soccer</label>
+                <input type="checkbox" id="baseball" name="interest" value="baseball">
+                <label for="baseball">Baseball</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feedback</legend>
+                <label>Are you enjoying our site?</label>
+                <input type="radio" id="yes" name="enjoying" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="enjoying" value="no">
+                <label for="no">No</label>
+
+                <label for="feedback">What can we do better?:</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NateDunnSports. All rights reserved.</p>
+    </footer>
+</body>
+</html>
