@@ -34,7 +34,8 @@ header p {
 /* Navigation styles */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     background-color: #007acc;
     padding: 10px;
 }
@@ -48,6 +49,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    flex-grow: 1;
 }
 
 nav ul li a {
@@ -55,6 +57,8 @@ nav ul li a {
     color: white;
     font-weight: 700;
     padding: 10px;
+    display: block;
+    text-align: center;
 }
 
 nav ul li a.active {
