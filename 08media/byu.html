@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name or Company Name">
+    <meta name="description" content="Explore the latest updates on BYU sports, their big wins, and future games.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYU - NateDunnSports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            min-height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+/* header design */
+        header {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #007acc;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+/* nav menu info */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007acc;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            padding: 10px;
+        }
+
+        nav ul li a.active {
+            background-color: #005b99;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #005b99;
+            border-radius: 5px;
+        }
+/* main infor */
+        main {
+            flex: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        main h1 {
+            font-size: 2rem;
+            color: #2e3b4e;
+            text-align: left;
+            display: inline-block;
+        }
+
+        main img {
+            float: right;
+            margin: 0 0 15px 15px;
+            max-width: 30%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        main p {
+            font-size: 1rem;
+            line-height: 1.6;
+            
+        }
+        
+       /*table information here*/
+        table.byu-records {
+            width: 100%;
+                border: collapse;
+            
+        }
+        table.byu-records th {
+            background-color: #005b99;
+            color: white;
+            padding: .5rem 2vw;
+            text-align: left;
+        
+        }
+        table.byu-records td {
+            color: #2e3b4e;
+            padding: .4rem 2vw;
+            
+        }
+        table.byu-records tr:nth-child(odd) {
+            background-color: #BDD6E6; }
+            
+        table.byu-records tr:hover {
+            background-color: rgba(110,124,160,1);
+            /* footer information */
+        } 
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: center;">
+    <img src="images/headerfinal.jpg" alt="Welcome to Utah Sports." style="width: 100px; height: 100px; margin-right: 20px;" class="hero-image">
+    <div>
+        <h1>NateDunnSports</h1>
+        <p>Covering ALL things Utah Sports</p>
+    </div>
+</header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="byu.html" class="active">BYU</a></li>
+            <li><a href="UtahUtes.html">Utah Utes</a></li>
+            <li><a href="UtahJazz.html">Utah Jazz</a></li>
+            <li><a href="UtahHockeyClub.html">Utah Hockey Club</a></li>
+            <li><a href="RSL.html">RSL</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>BYU Sports</h1>
+        <img src="images/BYU.png" alt="BYU" loading="lazy">
+        <img src="images/byu1.jpg" alt="BYU1" loading="lazy">
+          
+        <p>Welcome to the BYU Sports page! Here you can find updates on the latest wins, upcoming games, and news about BYU teams. Stay tuned for more information!</p>
+        
+        <h1>Great plays in BYU Football history</h1>
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/xYzgPw-bQ_c?si=fvxQdrw5166kNN57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <audio controls>
+            <source src="gocougs.ogg" type="audio/ogg">
+         <source src="gocougs.mp3" type="audio/mpeg">
+        </audio>
+        
+        <h2>Learn the fight song</h2>
+        <p>Want to know the <a href="byufightsong.pdf" target="_blank">Cougar Fight Song?</a> Learn it and memorize it!</p>
+        
+        <h2>Previous records by season and bowl game</h2>
+        
+        <table class="byu-records">
+        <tr>
+            <th>Record</th><th>Bowl Game</th><th>Win or Loss</th>
+            </tr>
+            <tr>
+            <td>2024: 9-2 Record (6-2 in Big 12)</td><td>TBD</td><td>TBD</td>
+            </tr>
+        <tr>
+            <td>2023: 5-7 Record (2-7 in Big 12)</td><td>No Bowl game</td><td>N/A</td>
+            </tr>
+            <tr>
+            <td>2022: 8-5 Record (No conference)</td><td>New Mexico Bowl vs SMU</td><td>WIN</td>
+            </tr>
+            <tr>
+            <td>2021: 10-3 Record (No conference)</td><td>Independence Bowl vs UAB</td><td>LOSS</td>
+            </tr>
+            <tr>
+            <td>2020: 11-1 Record (No conference)</td><td>Boca Raton Bowl vs UCF</td><td>WIN</td>
+            </tr>
+            <tr>
+            <td>2019: 7-6 Record (No conference)</td><td>Hawii Bowl vs Hawaii</td><td>LOSS</td>
+            </tr>
+        </table>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NateDunnSports. All rights reserved.</p>
+    </footer>
+</body>
+</html>
