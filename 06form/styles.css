@@ -136,9 +136,6 @@
             border: #ccc solid 1px;
             box-sizing: border-box;
         }
-        input[type="radio"], input[type="checkbox"] {
-            margin-right: 10px;
-        }
         .checkbox-group {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -146,16 +143,17 @@
         }
         .checkbox-group div {
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
         .checkbox-group input[type="checkbox"] {
             width: 20px;
             height: 20px;
-            margin-right: 10px;
         }
         .checkbox-group label {
             font-weight: normal;
             font-size: 1rem;
+            margin-left: 10px;
         }
         .submit-button {
             background-color: #007acc;
@@ -213,24 +211,24 @@
                 </select>
                 <div class="checkbox-group">
                     <div>
-                        <input type="checkbox" id="football" name="interest" value="football">
                         <label for="football">Football</label>
+                        <input type="checkbox" id="football" name="interest" value="football">
                     </div>
                     <div>
-                        <input type="checkbox" id="basketball" name="interest" value="basketball">
                         <label for="basketball">Basketball</label>
+                        <input type="checkbox" id="basketball" name="interest" value="basketball">
                     </div>
                     <div>
-                        <input type="checkbox" id="hockey" name="interest" value="hockey">
                         <label for="hockey">Hockey</label>
+                        <input type="checkbox" id="hockey" name="interest" value="hockey">
                     </div>
                     <div>
-                        <input type="checkbox" id="soccer" name="interest" value="soccer">
                         <label for="soccer">Soccer</label>
+                        <input type="checkbox" id="soccer" name="interest" value="soccer">
                     </div>
                     <div>
-                        <input type="checkbox" id="baseball" name="interest" value="baseball">
                         <label for="baseball">Baseball</label>
+                        <input type="checkbox" id="baseball" name="interest" value="baseball">
                     </div>
                 </div>
             </fieldset>
