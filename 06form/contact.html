@@ -55,23 +55,23 @@
                 </select>
 
                 <div class="checkbox-group">
-                    <div>
+                    <div class="checkbox-item">
                         <input type="checkbox" id="football" name="interest" value="football">
                         <label for="football">Football</label>
                     </div>
-                    <div>
+                    <div class="checkbox-item">
                         <input type="checkbox" id="basketball" name="interest" value="basketball">
                         <label for="basketball">Basketball</label>
                     </div>
-                    <div>
+                    <div class="checkbox-item">
                         <input type="checkbox" id="hockey" name="interest" value="hockey">
                         <label for="hockey">Hockey</label>
                     </div>
-                    <div>
+                    <div class="checkbox-item">
                         <input type="checkbox" id="soccer" name="interest" value="soccer">
                         <label for="soccer">Soccer</label>
                     </div>
-                    <div>
+                    <div class="checkbox-item">
                         <input type="checkbox" id="baseball" name="interest" value="baseball">
                         <label for="baseball">Baseball</label>
                     </div>
@@ -81,10 +81,12 @@
             <fieldset>
                 <legend>Feedback</legend>
                 <label>Are you enjoying our site?</label>
-                <input type="radio" id="yes" name="enjoying" value="yes" required>
-                <label for="yes">Yes</label>
-                <input type="radio" id="no" name="enjoying" value="no">
-                <label for="no">No</label>
+                <div class="radio-group">
+                    <input type="radio" id="yes" name="enjoying" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="enjoying" value="no">
+                    <label for="no">No</label>
+                </div>
 
                 <label for="feedback">What can we do better?:</label>
                 <textarea id="feedback" name="feedback" rows="4"></textarea>
