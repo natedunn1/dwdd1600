@@ -1,0 +1,145 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Width Control */
+header, nav, main, footer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background-color: #2e3b4e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #007acc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #007acc;
+    padding: 10px;
+    border: 2px solid #005b99;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+}
+
+nav ul li a.active {
+    background-color: #005b99;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #005b99;
+    border-radius: 5px;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #2e3b4e;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    color: #007acc;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Section styles */
+section {
+    border: 2px solid #007acc;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+section#AboutUs {
+    background-color: #e6f0ff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2e3b4e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+    }
+}
