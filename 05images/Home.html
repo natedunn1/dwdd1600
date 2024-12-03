@@ -3,30 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Your Name or Company Name">
-    <meta name="description" content="Welcome to our hub for Utah sports, where we cover everything from BYU and Utah State to the Jazz and RSL.">
+    <meta name="description" content="Welcome to our hub for Utah sports, where we cover everything from BYU to the Jazz and RSL.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NateDunnSports - Utah Sports Coverage</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General styles */
+        * {
+            box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Roboto', sans-serif; /* Sets the font family for the entire page */
+            background-color: #f4f4f9; /* Light gray background for better readability */
+            color: #333; /* Default text color */
             margin: 0;
             padding: 0;
         }
 
+        /* Width Control */
+        header, nav, main, footer {
+            max-width: 1100px; /* Maximum width for central alignment */
+            margin: 0 auto; /* Center align the elements horizontally */
+        }
+
         /* Header styles */
         header {
-            background-color: #2e3b4e;
-            color: white;
+            background-color: #2e3b4e; /* Dark blue header background */
+            color: white; /* White text for contrast */
             text-align: center;
             padding: 20px;
-            border-bottom: 4px solid #007acc;
+            border-bottom: 4px solid #007acc; /* Adds a blue border at the bottom */
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        header h2 {
             font-size: 2.5rem;
             font-weight: 700;
         }
@@ -37,97 +63,161 @@
 
         /* Navigation styles */
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #007acc;
+            display: flex; /* Flexbox used to align menu items horizontally */
+            justify-content: center; /* Center-aligns navigation items */
+            background-color: #007acc; /* Blue background for the navigation bar */
             padding: 10px;
+            border: 2px solid #005b99; /* Adds a border around the navigation bar */
+            border-radius: 8px; /* Rounds the corners of the navigation bar */
         }
 
         nav ul {
-            list-style: none;
-            display: flex;
+            list-style: none; /* Removes default bullet points from list */
+            display: flex; /* Flexbox used to display menu items horizontally */
             margin: 0;
             padding: 0;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 15px; /* Spacing between navigation items */
         }
 
         nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 700;
+            text-decoration: none; /* Removes underline from links */
+            color: white; /* White link text for contrast */
+            font-weight: 700; /* Bold link text */
             padding: 10px;
         }
 
         nav ul li a.active {
-            background-color: #005b99;
-            border-radius: 5px;
+            background-color: #005b99; /* Background color for the active page link */
+            border-radius: 5px; /* Rounds the corners of the active link */
         }
 
         nav ul li a:hover {
-            background-color: #005b99;
-            border-radius: 5px;
+            background-color: #005b99; /* Background color on hover for links */
+            border-radius: 5px; /* Rounds the corners of hovered link */
         }
 
         /* Main content */
         main {
-            max-width: 1100px;
-            margin: 0 auto;
             padding: 20px;
+            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff); /* Gradient background for main content */
         }
 
         main h1 {
             font-size: 2rem;
-            color: #2e3b4e;
+            color: #2e3b4e; /* Dark blue color for main heading */
             text-align: center;
         }
 
         main h2 {
             font-size: 1.5rem;
-            color: #007acc;
+            color: #007acc; /* Blue color for subheadings */
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
         main p {
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.6; /* Increased line height for readability */
         }
+
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .hero-image:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow effect when hovering over the image */
+        }
+        
+        /*image gallery*/
+        .image-gallery {
+    display: flex; /* Flexbox for arranging images horizontally */
+    gap: 10px; /* Spacing between images */
+    justify-content: center; /* Center the images */
+    margin-top: 15px; /* Add some space between the paragraph and the images */
+}
+
 
         /* Footer styles */
         footer {
-            background-color: #2e3b4e;
-            color: white;
+            background-color: #2e3b4e; /* Dark blue background for footer */
+            color: white; /* White text for contrast */
             text-align: center;
             padding: 15px;
         }
 
         footer a {
-            color: #00d4ff;
+            color: #00d4ff; /* Light blue color for links in the footer */
             text-decoration: none;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Adds underline when hovering over footer links */
+        }
+
+        /* Shadows */
+        .gallery img:hover, .hero-image:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect to gallery images on hover */
+        }
+
+        /* Highlight section list - changed bullet type */
+        ul {
+            list-style-type: square; /* Changed bullet type to disc for better visual distinction */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Stacks navigation items vertically on smaller screens */
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            nav ul {
+                flex-direction: row; /* Displays navigation items in a row on larger screens */
+            }
+        }
+
+        /* Border and Border-radius for main sections */
+        section {
+            border: 2px solid #007acc; /* Adds blue border to sections */
+            border-radius: 15px; /* Rounds the corners of the sections */
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff; /* White background for each section */
+        }
+
+        /* About Us Section - Light Blue Background */
+        section#AboutUs {
+            background-color: #e6f0ff; /* Light blue background for About Us section */
         }
     </style>
 </head>
 <body>
     <!-- Welcome header -->
-    <header>
-        <h1>NateDunnSports</h1>
-        <p>Covering ALL things Utah Sports</p>
+    <header style="display: flex; align-items: center;">
+        <div>
+            <h1>NateDunnSports</h1>
+            <p>Covering ALL things Utah Sports</p>
+        </div>
     </header>
 
     <!-- Navigation menu -->
     <nav>
         <ul>
-            <li><a href="Home.html" class="active">Home</a></li>
+           <li><a href="home.html" class="active">Home</a></li>
             <li><a href="byu.html">BYU</a></li>
             <li><a href="UtahUtes.html">Utah Utes</a></li>
             <li><a href="UtahJazz.html">Utah Jazz</a></li>
             <li><a href="UtahHockeyClub.html">Utah Hockey Club</a></li>
             <li><a href="RSL.html">RSL</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -137,33 +227,82 @@
         <p>We're excited to bring you all the latest and greatest in Utah sports!</p>
 
         <section id="BYU">
-            <h2>BYU</h2>
-            <p>Check out what's happening with BYU sports teams, their big wins, and future games.</p>
-        </section>
+    <h2>BYU</h2>
+    <p>Check out what's happening with BYU sports teams, their big wins, and future games.</p>
+    <div class="image-gallery">
+        <img src="images/BYU.png" alt="BYU" width="200" height="150">
+        <img src="images/byu1.jpg" alt="BYU" width="200" height="150">
+    </div>
+</section>
 
-        <section id="UtahUtes">
-            <h2>Utah Utes</h2>
-            <p>Check out what's happening with Utah sports teams, their big wins, and future games.</p>
-        </section>
+<section id="UtahUtes">
+    <h2>Utah Utes</h2>
+    <p>Check out what's happening with Utah sports teams, their big wins, and future games.</p>
+    <div class="image-gallery">
+        <img src="images/UtahUtes.png" alt="Utah Utes" width="200" height="150">
+        <img src="images/utahutes1.png" alt="Utah Utes" width="200" height="150">
+    </div>
+</section>
+<section id="UtahJazz">
+    <h2>Utah Jazz</h2>
+    <p>Stay updated with the latest Utah Jazz news.</p>
+    <div class="image-gallery">
+        <img src="images/UtahJazz.png" alt="Utah Jazz" width="200" height="150">
+        <img src="images/utahjazz1.png" alt="Utah Jazz" width="250" height="200">
+    </div>
+</section>
 
-        <section id="UtahJazz">
-            <h2>Utah Jazz</h2>
-            <p>Stay updated with the latest Utah Jazz news.</p>
-        </section>
+<section id="UtahHockeyClub">
+    <h2>Utah Hockey Club</h2>
+    <p>Learn about the Utah Hockey Club.</p>
+    <div class="image-gallery">
+        <img src="images/utahhockeyclub.png" alt="Utah Hockey Club" width="250" height="200">
+        <img src="images/utahhockeyclub1.png" alt="Utah Hockey Club" width="250" height="200">
+    </div>
+</section>
 
-        <section id="UtahHockeyClub">
-            <h2>Utah Hockey Club</h2>
-            <p>Learn about the Utah Hockey Club, their victories, and future matchups.</p>
-        </section>
 
         <section id="RSL">
             <h2>RSL (Real Salt Lake)</h2>
-            <p>Catch up with the latest news on RSL and their exciting games.</p>
+            <p>Catch up with the latest news on RSL</p>
+        </section>
+
+        <!-- Additional HTML Elements -->
+        <section id="AboutUs" style="background-color: #e6f0ff;">
+            <h2>About Us</h2>
+            <ul>
+                <li>Dedicated coverage of ALL Utah sports</li>
+                <li>Breaking news and analysis</li>
+                <li>Fan engagement</li>
+            </ul>
+
+            <ol>
+                <li>Read our stories</li>
+                <li>Check daily for updates</li>
+                <li>Follow us on social media @NateDunnKSL</li>
+            </ol>
+
+            <dl>
+                <dt>BYU and Utah:</dt>
+                <dd>BYU and Utah sports, news, and updates.</dd>
+                <dt>Utah Jazz and Utah Hockey Club:</dt>
+                <dd>The latest on Utah's professional teams.</dd>
+                <dt>RSL:</dt>
+                <dd>Updates on RSL.</dd>
+            </dl>
+
+            <p>Stay tuned for more <em>exciting</em> updates and features. <strong>Don’t miss out!</strong></p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
+        <address>
+            NateDunnSports<br>
+            123 Utah Sports Lane<br>
+            Salt Lake City, UT 84101<br>
+            <a href="mailto:info@natedunnsports.com">info@natedunnsports.com</a>
+        </address>
         <p>&copy; 2024 NateDunnSports. All rights reserved.</p>
     </footer>
 </body>
