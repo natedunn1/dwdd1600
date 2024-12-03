@@ -34,16 +34,8 @@
             text-align: center;
             padding: 20px;
             border-bottom: 4px solid #007acc;
-        }
-        
-        header img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
-
-        header {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
@@ -63,6 +55,8 @@
             justify-content: center;
             background-color: #007acc;
             padding: 10px;
+            border: 2px solid #005b99;
+            border-radius: 8px;
         }
 
         nav ul {
@@ -96,6 +90,7 @@
         /* Main content */
         main {
             padding: 20px;
+            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
         }
 
         main h1 {
@@ -107,6 +102,8 @@
         main h2 {
             font-size: 1.5rem;
             color: #007acc;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
         main p {
@@ -123,6 +120,18 @@
 
         .hero-image:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Image gallery */
+        .image-gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .gallery img:hover, .hero-image:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer styles */
@@ -142,16 +151,6 @@
             text-decoration: underline;
         }
 
-        /* CSS Gradient */
-        main {
-            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
-        }
-
-        /* Shadows */
-        .gallery img:hover, .hero-image:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
         /* Media Queries */
         @media (max-width: 768px) {
             nav ul {
@@ -165,12 +164,26 @@
                 flex-direction: row;
             }
         }
+
+        /* Border and Border-radius for main sections */
+        section {
+            border: 2px solid #007acc;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+
+        /* About Us Section - Light Blue Background */
+        section#AboutUs {
+            background-color: #e6f0ff;
+        }
     </style>
 </head>
 <body>
     <!-- Welcome header -->
-    <header style="display: flex; align-items: center;">
-        <img src="images/headerfinal.jpg" alt="Welcome to Utah Sports." style="width: 100px; height: 100px; margin-right: 20px;" class="hero-image">
+    <header style="display: flex; align-items: center; justify-content: center;">
+        <img src="images/headerfinal.jpg" alt="Welcome to Utah Sports." style="width: 100px; height: 100px; margin-right: 20px;">
         <div>
             <h1>NateDunnSports</h1>
             <p>Covering ALL things Utah Sports</p>
@@ -198,42 +211,80 @@
 
         <section id="BYU">
             <h2>BYU</h2>
-            <p>Check out what's happening with BYU sports teams, their big wins, and future games. 
-                
-            </p>
+            <p>Check out what's happening with BYU sports teams, their big wins, and future games.</p>
+            <div class="image-gallery">
+                <img src="images/BYU.png" alt="BYU" width="200" height="150">
+                <img src="images/byu1.jpg" alt="BYU" width="200" height="150">
+            </div>
         </section>
 
         <section id="UtahUtes">
             <h2>Utah Utes</h2>
-            <p>Check out what's happening with Utah sports teams, their big wins, and future games. 
-                
-            </p>
+            <p>Check out what's happening with Utah sports teams, their big wins, and future games.</p>
+            <div class="image-gallery">
+                <img src="images/UtahUtes.png" alt="Utah Utes" width="200" height="150">
+                <img src="images/utahutes1.png" alt="Utah Utes" width="200" height="150">
+            </div>
         </section>
 
         <section id="UtahJazz">
             <h2>Utah Jazz</h2>
-            <p>Stay updated with the latest Utah Jazz news. 
-                
-            </p>
+            <p>Stay updated with the latest Utah Jazz news.</p>
+            <div class="image-gallery">
+                <img src="images/UtahJazz.png" alt="Utah Jazz" width="200" height="150">
+                <img src="images/utahjazz1.png" alt="Utah Jazz" width="250" height="200">
+            </div>
         </section>
 
         <section id="UtahHockeyClub">
             <h2>Utah Hockey Club</h2>
-            <p>Learn about the Utah Hockey Club, their victories, and future matchups.
-               
-            </p>
+            <p>Learn about the Utah Hockey Club, their victories, and future matchups.</p>
+            <div class="image-gallery">
+                <img src="images/utahhockeyclub.png" alt="Utah Hockey Club" width="250" height="200">
+                <img src="images/utahhockeyclub1.png" alt="Utah Hockey Club" width="250" height="200">
+            </div>
         </section>
 
         <section id="RSL">
             <h2>RSL (Real Salt Lake)</h2>
-            <p>Catch up with the latest news on RSL and their exciting games.
-                
-            </p>
+            <p>Catch up with the latest news on RSL and their exciting games.</p>
+        </section>
+
+        <section id="AboutUs" style="background-color: #e6f0ff;">
+            <h2>About Us</h2>
+            <ul>
+                <li>Dedicated coverage of ALL Utah sports</li>
+                <li>Breaking news and analysis</li>
+                <li>Fan engagement</li>
+            </ul>
+
+            <ol>
+                <li>Read our stories</li>
+                <li>Check daily for updates</li>
+                <li>Follow us on social media @NateDunnKSL</li>
+            </ol>
+
+            <dl>
+                <dt>BYU and Utah:</dt>
+                <dd>BYU and Utah sports, news, and updates.</dd>
+                <dt>Utah Jazz and Utah Hockey Club:</dt>
+                <dd>The latest on Utah's professional teams.</dd>
+                <dt>RSL:</dt>
+                <dd>Updates on RSL.</dd>
+            </dl>
+
+            <p>Stay tuned for more <em>exciting</em> updates and features. <strong>Don’t miss out!</strong></p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
+        <address>
+            NateDunnSports<br>
+            123 Utah Sports Lane<br>
+            Salt Lake City, UT 84101<br>
+            <a href="mailto:info@natedunnsports.com">info@natedunnsports.com</a>
+        </address>
         <p>&copy; 2024 NateDunnSports. All rights reserved.</p>
     </footer>
 </body>
