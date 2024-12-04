@@ -10,49 +10,36 @@
     <style>
         /* General styles */
         * {
-            box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Roboto', sans-serif; /* Sets the font family for the entire page */
-            background-color: #f4f4f9; /* Light gray background for better readability */
-            color: #333; /* Default text color */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
             margin: 0;
             padding: 0;
         }
 
         /* Width Control */
         header, nav, main, footer {
-            max-width: 1100px; /* Maximum width for central alignment */
-            margin: 0 auto; /* Center align the elements horizontally */
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         /* Header styles */
         header {
-            background-color: #2e3b4e; /* Dark blue header background */
-            color: white; /* White text for contrast */
+            background-color: #2e3b4e;
+            color: white;
             text-align: center;
             padding: 20px;
-            border-bottom: 4px solid #007acc; /* Adds a blue border at the bottom */
-        }
-
-        header img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
-
-        header {
+            border-bottom: 4px solid #007acc;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        header h2 {
             font-size: 2.5rem;
             font-weight: 700;
         }
@@ -63,145 +50,113 @@
 
         /* Navigation styles */
         nav {
-            display: flex; /* Flexbox used to align menu items horizontally */
-            justify-content: center; /* Center-aligns navigation items */
-            background-color: #007acc; /* Blue background for the navigation bar */
+            display: flex;
+            justify-content: center;
+            background-color: #007acc;
             padding: 10px;
-            border: 2px solid #005b99; /* Adds a border around the navigation bar */
-            border-radius: 8px; /* Rounds the corners of the navigation bar */
+            border: 2px solid #005b99;
+            border-radius: 8px;
         }
 
         nav ul {
-            list-style: none; /* Removes default bullet points from list */
-            display: flex; /* Flexbox used to display menu items horizontally */
+            list-style: none;
+            display: flex;
             margin: 0;
             padding: 0;
         }
 
         nav ul li {
-            margin: 0 15px; /* Spacing between navigation items */
+            margin: 0 15px;
         }
 
         nav ul li a {
-            text-decoration: none; /* Removes underline from links */
-            color: white; /* White link text for contrast */
-            font-weight: 700; /* Bold link text */
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
             padding: 10px;
         }
 
-        nav ul li a.active {
-            background-color: #005b99; /* Background color for the active page link */
-            border-radius: 5px; /* Rounds the corners of the active link */
-        }
-
-        nav ul li a:hover {
-            background-color: #005b99; /* Background color on hover for links */
-            border-radius: 5px; /* Rounds the corners of hovered link */
+        nav ul li a.active, nav ul li a:hover {
+            background-color: #005b99;
+            border-radius: 5px;
         }
 
         /* Main content */
         main {
             padding: 20px;
-            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff); /* Gradient background for main content */
+            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
         }
 
         main h1 {
             font-size: 2rem;
-            color: #2e3b4e; /* Dark blue color for main heading */
+            color: #2e3b4e;
             text-align: center;
         }
 
         main h2 {
             font-size: 1.5rem;
-            color: #007acc; /* Blue color for subheadings */
+            color: #007acc;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         main p {
             font-size: 1rem;
-            line-height: 1.6; /* Increased line height for readability */
+            line-height: 1.6;
         }
 
-        /* Hero Image */
-        .hero-image {
+        /* Image gallery */
+        .image-gallery {
+            display: grid;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        /* Responsive grid layout */
+        @media (min-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .image-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .image-gallery img {
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            border: 2px solid #007acc;
+            border-radius: 8px;
         }
 
-        .hero-image:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow effect when hovering over the image */
+        .image-gallery img:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        
-        /*image gallery*/
-        .image-gallery {
-    display: flex; /* Flexbox for arranging images horizontally */
-    gap: 10px; /* Spacing between images */
-    justify-content: center; /* Center the images */
-    margin-top: 15px; /* Add some space between the paragraph and the images */
-}
-
 
         /* Footer styles */
         footer {
-            background-color: #2e3b4e; /* Dark blue background for footer */
-            color: white; /* White text for contrast */
+            background-color: #2e3b4e;
+            color: white;
             text-align: center;
             padding: 15px;
         }
 
         footer a {
-            color: #00d4ff; /* Light blue color for links in the footer */
+            color: #00d4ff;
             text-decoration: none;
         }
 
         footer a:hover {
-            text-decoration: underline; /* Adds underline when hovering over footer links */
-        }
-
-        /* Shadows */
-        .gallery img:hover, .hero-image:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect to gallery images on hover */
-        }
-
-        /* Highlight section list - changed bullet type */
-        ul {
-            list-style-type: square; /* Changed bullet type to disc for better visual distinction */
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column; /* Stacks navigation items vertically on smaller screens */
-                align-items: center;
-            }
-        }
-
-        @media (min-width: 769px) {
-            nav ul {
-                flex-direction: row; /* Displays navigation items in a row on larger screens */
-            }
-        }
-
-        /* Border and Border-radius for main sections */
-        section {
-            border: 2px solid #007acc; /* Adds blue border to sections */
-            border-radius: 15px; /* Rounds the corners of the sections */
-            padding: 15px;
-            margin-bottom: 20px;
-            background-color: #ffffff; /* White background for each section */
-        }
-
-        /* About Us Section - Light Blue Background */
-        section#AboutUs {
-            background-color: #e6f0ff; /* Light blue background for About Us section */
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <!-- Welcome header -->
-    <header style="display: flex; align-items: center;">
+    <header>
         <div>
             <h1>NateDunnSports</h1>
             <p>Covering ALL things Utah Sports</p>
@@ -211,7 +166,7 @@
     <!-- Navigation menu -->
     <nav>
         <ul>
-           <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="home.html" class="active">Home</a></li>
             <li><a href="byu.html">BYU</a></li>
             <li><a href="UtahUtes.html">Utah Utes</a></li>
             <li><a href="UtahJazz.html">Utah Jazz</a></li>
@@ -227,40 +182,40 @@
         <p>We're excited to bring you all the latest and greatest in Utah sports!</p>
 
         <section id="BYU">
-    <h2>BYU</h2>
-    <p>Check out what's happening with BYU sports teams, their big wins, and future games.</p>
-    <div class="image-gallery">
-        <img src="images/BYU.png" alt="BYU" width="200" height="150">
-        <img src="images/byu1.jpg" alt="BYU" width="200" height="150">
-    </div>
-</section>
+            <h2>BYU</h2>
+            <p>Check out what's happening with BYU sports teams, their big wins, and future games.</p>
+            <div class="image-gallery">
+                <img src="images/BYU.png" alt="BYU">
+                <img src="images/byu1.jpg" alt="BYU">
+            </div>
+        </section>
 
-<section id="UtahUtes">
-    <h2>Utah Utes</h2>
-    <p>Check out what's happening with Utah sports teams, their big wins, and future games.</p>
-    <div class="image-gallery">
-        <img src="images/UtahUtes.png" alt="Utah Utes" width="200" height="150">
-        <img src="images/utahutes1.png" alt="Utah Utes" width="200" height="150">
-    </div>
-</section>
-<section id="UtahJazz">
-    <h2>Utah Jazz</h2>
-    <p>Stay updated with the latest Utah Jazz news.</p>
-    <div class="image-gallery">
-        <img src="images/UtahJazz.png" alt="Utah Jazz" width="200" height="150">
-        <img src="images/utahjazz1.png" alt="Utah Jazz" width="250" height="200">
-    </div>
-</section>
+        <section id="UtahUtes">
+            <h2>Utah Utes</h2>
+            <p>Check out what's happening with Utah sports teams, their big wins, and future games.</p>
+            <div class="image-gallery">
+                <img src="images/UtahUtes.png" alt="Utah Utes">
+                <img src="images/utahutes1.png" alt="Utah Utes">
+            </div>
+        </section>
 
-<section id="UtahHockeyClub">
-    <h2>Utah Hockey Club</h2>
-    <p>Learn about the Utah Hockey Club.</p>
-    <div class="image-gallery">
-        <img src="images/utahhockeyclub.png" alt="Utah Hockey Club" width="250" height="200">
-        <img src="images/utahhockeyclub1.png" alt="Utah Hockey Club" width="250" height="200">
-    </div>
-</section>
+        <section id="UtahJazz">
+            <h2>Utah Jazz</h2>
+            <p>Stay updated with the latest Utah Jazz news.</p>
+            <div class="image-gallery">
+                <img src="images/UtahJazz.png" alt="Utah Jazz">
+                <img src="images/utahjazz1.png" alt="Utah Jazz">
+            </div>
+        </section>
 
+        <section id="UtahHockeyClub">
+            <h2>Utah Hockey Club</h2>
+            <p>Learn about the Utah Hockey Club.</p>
+            <div class="image-gallery">
+                <img src="images/utahhockeyclub.png" alt="Utah Hockey Club">
+                <img src="images/utahhockeyclub1.png" alt="Utah Hockey Club">
+            </div>
+        </section>
 
         <section id="RSL">
             <h2>RSL (Real Salt Lake)</h2>
@@ -268,7 +223,7 @@
         </section>
 
         <!-- Additional HTML Elements -->
-        <section id="AboutUs" style="background-color: #e6f0ff;">
+        <section id="AboutUs">
             <h2>About Us</h2>
             <ul>
                 <li>Dedicated coverage of ALL Utah sports</li>
