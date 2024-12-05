@@ -29,6 +29,11 @@
             line-height: 1.6;
         }
 
+        /* Add favicon for all pages */
+        :root {
+            --favicon-url: url('favicon.ico');
+        }
+
         /* Header styles */
         header {
             background-color: #2e3b4e;
