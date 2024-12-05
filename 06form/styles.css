@@ -76,7 +76,7 @@ form {
 fieldset {
     border: 3px solid #007acc; /* Increase border size for visibility */
     border-radius: 10px; /* Larger rounded corners */
-    padding: 30px; /* Increase padding inside */
+    padding: 35px; /* Increase padding inside */
     margin-bottom: 20px;
     position: relative;
 }
