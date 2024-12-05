@@ -35,8 +35,8 @@ header p {
 
 /* Navigation styles */
 nav {
-    background-color: #007acc; /* Ensure the nav has a consistent background color */
-    padding: 10px;
+    background-color: #077acc; /* Ensure the nav has a consistent background color */
+    padding: 15px; /* Add padding for better spacing */
     border-bottom: 3px solid #005b99; /* Add a subtle bottom border for separation */
 }
 
