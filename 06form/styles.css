@@ -73,9 +73,9 @@ form {
 }
 
 fieldset {
-    border: 3px solid #007acc; /* Increase border size */
-    border-radius: 8px; /* Larger corner radius */
-    padding: 20px; /* More space inside fieldset */
+    border: 3px solid #007acc; /* Increase border thickness */
+    border-radius: 10px; /* Larger rounded corners */
+    padding: 25px; /* More padding inside */
     margin-bottom: 20px;
 }
 
@@ -83,12 +83,13 @@ legend {
     font-weight: 700;
     color: #007acc;
     padding: 0 12px; /* Padding for better fit */
-    font-size: 1.1rem; /* Larger font */
+    font-size: 1.2rem; /* Larger font */
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 input[type="text"],
@@ -105,14 +106,14 @@ textarea {
 
 .radio-group, .checkbox-group {
     display: flex;
-    flex-direction: column;
-    gap: 15px; /* More space between options */
+    flex-direction: column; /* Stack vertically */
+    gap: 15px;
 }
 
 .radio-item, .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 12px; /* Space between input and label */
+    gap: 12px;
 }
 
 input[type="radio"], input[type="checkbox"] {
