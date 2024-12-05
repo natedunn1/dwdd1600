@@ -73,21 +73,22 @@ form {
 }
 
 fieldset {
-    border: 2px solid #007acc;
-    border-radius: 5px;
-    padding: 15px;
+    border: 3px solid #007acc; /* Increase border size */
+    border-radius: 8px; /* Larger corner radius */
+    padding: 20px; /* More space inside fieldset */
     margin-bottom: 20px;
 }
 
 legend {
     font-weight: 700;
     color: #007acc;
-    padding: 0 10px;
+    padding: 0 12px; /* Padding for better fit */
+    font-size: 1.1rem; /* Larger font */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 input[type="text"],
@@ -96,28 +97,29 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
     border: 1px solid #ccc;
 }
 
 .radio-group, .checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 15px; /* More space between options */
 }
 
 .radio-item, .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px; /* Space between input and label */
 }
 
 input[type="radio"], input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    width: 22px; /* Larger size */
+    height: 22px;
+    margin: 0;
+    cursor: pointer;
 }
 
 .submit-button {
@@ -126,6 +128,7 @@ input[type="radio"], input[type="checkbox"] {
     padding: 15px;
     border-radius: 5px;
     width: 100%;
+    cursor: pointer;
 }
 
 footer {
