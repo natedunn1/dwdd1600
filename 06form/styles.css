@@ -35,9 +35,8 @@ header p {
 
 /* Navigation styles */
 nav {
-    background-color: #077acc; /* Ensure the nav has a consistent background color */
-    padding: 15px; /* Add padding for better spacing */
-    border-bottom: 3px solid #005b99; /* Add a subtle bottom border for separation */
+    background-color: #2e3b4e; /* Match the navigation color to the example page */
+    padding: 10px 0;
 }
 
 nav ul {
@@ -49,20 +48,26 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white; /* Ensure text color is white */
-    font-weight: 700; /* Make the text bold for better visibility */
+    color: #ffffff; /* Ensure text color is white */
+    font-weight: 700;
+    font-size: 1rem;
     padding: 10px 15px;
-    border-radius: 5px; /* Slightly round the corners */
-    transition: background-color 0.3s ease; /* Add a smooth hover effect */
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a.active, nav ul li a:hover {
-    background-color: #005b99; /* Darken background on hover and active state */
+nav ul li a:hover {
+    background-color: #007acc; /* Add hover effect to match the example page */
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #007acc; /* Active link background */
+    border-radius: 5px;
 }
 
 main {
