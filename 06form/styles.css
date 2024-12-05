@@ -36,7 +36,7 @@ header p {
 /* Navigation styles */
 nav {
     background-color: #2e3b4e; /* Match the navigation color to the example page */
-    padding: 10px 0;
+    padding: 0.5em 0;
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 1.5em;
 }
 
 nav ul li a {
@@ -56,7 +56,7 @@ nav ul li a {
     color: #ffffff; /* Ensure text color is white */
     font-weight: 700;
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 0.5em 1em;
     transition: background-color 0.3s ease;
 }
 
@@ -74,7 +74,7 @@ main {
     flex: 1;
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 1.5em;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -82,36 +82,35 @@ main {
 
 form {
     background-color: white;
-    padding: 20px;
+    padding: 1.5em;
     border-radius: 5px;
 }
 
 /* Fieldset styles */
 fieldset {
-    border: 3px solid #007acc; /* Increase border size for visibility */
+    border: 2px solid #007acc; /* Match border size to the example page */
     border-radius: 10px; /* Larger rounded corners */
-    padding: 33px; /* Increase padding inside */
-    margin-bottom: 20px;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
     position: relative;
 }
 
 legend {
     font-weight: 700;
     color: #007acc;
-    padding: 0 12px;
     font-size: 1.2rem; /* Larger font */
-    margin-bottom: 15px; /* Add space below the legend */
+    margin-bottom: 0.5em; /* Add space below the legend */
     background: #f4f4f9; /* Match background color */
-    padding: 0 10px; /* Add padding to prevent overlap with the border */
-    position: absolute; /* Position legend inside the border */
-    top: -15px; /* Move it slightly above the fieldset border */
-    left: 20px;
+    padding: 0 0.5em; /* Add padding to prevent overlap with the border */
+    position: absolute;
+    top: -0.8em;
+    left: 1em;
 }
 
 /* Labels and inputs */
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.5em;
     font-size: 1rem;
 }
 
@@ -121,9 +120,9 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 6px;
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box; /* Ensure borders are included in the width */
 }
@@ -132,18 +131,18 @@ textarea {
 .radio-group, .checkbox-group {
     display: flex;
     flex-direction: column; /* Stack vertically */
-    gap: 20px; /* Add spacing between items */
+    gap: 1em; /* Add spacing between items */
 }
 
 .radio-item, .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75em;
 }
 
 input[type="radio"], input[type="checkbox"] {
-    width: 22px; /* Larger size */
-    height: 22px;
+    width: 20px;
+    height: 20px;
     margin: 0;
     cursor: pointer;
 }
@@ -152,13 +151,18 @@ input[type="radio"], input[type="checkbox"] {
 .submit-button {
     background-color: #007acc;
     color: white;
-    padding: 15px;
+    padding: 1em;
     border-radius: 5px;
     width: 100%;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 1em;
+    background-color: #2e3b4e;
+    color: white;
+    font-size: 1rem;
 }
