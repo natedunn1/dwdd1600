@@ -72,20 +72,29 @@ form {
     border-radius: 5px;
 }
 
+/* Fieldset styles */
 fieldset {
-    border: 3px solid #007acc; /* Increase border thickness */
+    border: 3px solid #007acc; /* Increase border size for visibility */
     border-radius: 10px; /* Larger rounded corners */
-    padding: 25px; /* More padding inside */
+    padding: 30px; /* Increase padding inside */
     margin-bottom: 20px;
+    position: relative;
 }
 
 legend {
     font-weight: 700;
     color: #007acc;
-    padding: 0 12px; /* Padding for better fit */
+    padding: 0 12px;
     font-size: 1.2rem; /* Larger font */
+    margin-bottom: 15px; /* Add space below the legend */
+    background: #f4f4f9; /* Match background color */
+    padding: 0 10px; /* Add padding to prevent overlap with the border */
+    position: absolute; /* Position legend inside the border */
+    top: -15px; /* Move it slightly above the fieldset border */
+    left: 20px;
 }
 
+/* Labels and inputs */
 label {
     display: block;
     margin-bottom: 10px;
@@ -102,18 +111,20 @@ textarea {
     margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure borders are included in the width */
 }
 
+/* Checkbox and radio group styling */
 .radio-group, .checkbox-group {
     display: flex;
     flex-direction: column; /* Stack vertically */
-    gap: 15px;
+    gap: 20px; /* Add spacing between items */
 }
 
 .radio-item, .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12px; /* Space between input and label */
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -123,6 +134,7 @@ input[type="radio"], input[type="checkbox"] {
     cursor: pointer;
 }
 
+/* Submit button */
 .submit-button {
     background-color: #007acc;
     color: white;
