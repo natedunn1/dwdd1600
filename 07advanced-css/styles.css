@@ -112,51 +112,6 @@ nav ul li a.active, nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Larger Tablets and Small Desktops */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        max-width: 90%; /* Reduce width slightly on tablets */
-    }
-
-    header img.logo {
-        width: 90px; /* Slightly smaller logo */
-    }
-
-    nav ul li {
-        margin: 0 10px; /* Decrease spacing between nav items */
-    }
-}
-
-/* Very Small Screens */
-@media (max-width: 480px) {
-    main {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 1.5rem; /* Make header text smaller */
-    }
-
-    .image-gallery img {
-        width: 150px; /* Reduce image sizes for smaller screens */
-    }
-}
-
 /* Main content */
 main {
     padding: 20px;
@@ -232,6 +187,51 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Larger Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%; /* Reduce width slightly on tablets */
+    }
+
+    header img.logo {
+        width: 90px; /* Slightly smaller logo */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Decrease spacing between nav items */
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Make header text smaller */
+    }
+
+    .image-gallery img {
+        width: 150px; /* Reduce image sizes for smaller screens */
+    }
+}
+
 /* Additional Media Queries for Autograder Detection */
 @media (max-width: 600px) {
     body {
@@ -248,5 +248,27 @@ footer a:hover {
 
     .container {
         padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    header, footer {
+        text-align: left;
+        padding: 15px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
