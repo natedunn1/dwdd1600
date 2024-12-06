@@ -127,6 +127,36 @@ nav ul li a.active, nav ul li a:hover {
     }
 }
 
+/* Larger Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%; /* Reduce width slightly on tablets */
+    }
+
+    header img.logo {
+        width: 90px; /* Slightly smaller logo */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Decrease spacing between nav items */
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Make header text smaller */
+    }
+
+    .image-gallery img {
+        width: 150px; /* Reduce image sizes for smaller screens */
+    }
+}
+
 /* Main content */
 main {
     padding: 20px;
