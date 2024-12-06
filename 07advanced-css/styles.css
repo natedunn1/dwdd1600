@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Your Name or Company Name">
-    <meta name="description" content="Contact NateDunnSports for inquiries and feedback">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - NateDunnSports</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
 /* General styles */
 * {
-    box-sizing: border-box; /* Set box model to border-box */
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    min-height: 100%;
+    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* Width Control */
@@ -38,12 +21,12 @@ header, nav, main, footer {
 header {
     background-color: #2e3b4e;
     color: white;
+    text-align: center;
     padding: 20px;
     border-bottom: 4px solid #007acc;
-    display: flex; /* Flexbox for positioning */
+    display: flex;
     align-items: center;
-    justify-content: center; /* Aligns the image and text side-by-side */
-    text-align: center;
+    justify-content: center;
 }
 
 header img.logo {
@@ -71,7 +54,6 @@ nav {
     padding: 10px;
     border: 2px solid #005b99;
     border-radius: 8px;
-    flex-wrap: wrap;
 }
 
 nav ul {
@@ -83,7 +65,6 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
-    flex-grow: 1;
 }
 
 nav ul li a {
@@ -91,9 +72,6 @@ nav ul li a {
     color: white;
     font-weight: 700;
     padding: 10px;
-    display: block;
-    text-align: center;
-    transition: background-color 0.3s ease;
 }
 
 nav ul li a.active, nav ul li a:hover {
@@ -107,7 +85,6 @@ nav ul li a.active, nav ul li a:hover {
         flex-direction: column;
         align-items: center;
     }
-
     nav ul li {
         margin: 10px 0;
     }
@@ -115,18 +92,14 @@ nav ul li a.active, nav ul li a:hover {
 
 /* Main content */
 main {
-    flex: 1;
     padding: 20px;
-    background: linear-gradient(to bottom, #f4f4f9, #e0e7ff); /* CSS Gradient for main content */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
 }
 
 main h1 {
     font-size: 2rem;
     color: #2e3b4e;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 main h2 {
@@ -184,20 +157,6 @@ main p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Border and Border-radius for main sections */
-section {
-    border: 2px solid #007acc; /* Adds blue border to sections */
-    border-radius: 15px; /* Rounds the corners of the sections */
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-}
-
-/* About Us Section - Light Blue Background */
-section#AboutUs {
-    background-color: #e6f0ff; /* Light blue background for About Us section */
-}
-
 /* Footer styles */
 footer {
     background-color: #2e3b4e;
@@ -213,23 +172,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-@media (min-width: 769px) {
-    nav ul {
-        </style>
-        flex-direction: row;
-    }
 }
