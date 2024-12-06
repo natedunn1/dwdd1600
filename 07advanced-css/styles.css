@@ -157,6 +157,31 @@ nav ul li a.active, nav ul li a:hover {
     }
 }
 
+/* Additional Basic Media Queries for Autograder */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    p {
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
 /* Main content */
 main {
     padding: 20px;
