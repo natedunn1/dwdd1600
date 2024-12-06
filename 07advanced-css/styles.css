@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name or Company Name">
+    <meta name="description" content="Contact NateDunnSports for inquiries and feedback">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NateDunnSports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
 /* General styles */
 * {
     box-sizing: border-box; /* Set box model to border-box */
@@ -219,6 +229,7 @@ footer a:hover {
 
 @media (min-width: 769px) {
     nav ul {
+        </style>
         flex-direction: row;
     }
 }
