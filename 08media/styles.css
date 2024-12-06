@@ -20,8 +20,23 @@ body {
 
 /* Width Control */
 header, nav, main, footer {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Full-width header and navigation */
+header, nav {
+    width: 100%; /* Full width */
+}
+
+/* Add a container for centering content */
+.container {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 15px; /* Optional for better responsiveness */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Header styles */
@@ -34,18 +49,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 header img.logo {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin: 0;
+    margin: 10px 0;
 }
 
 header p {
@@ -53,27 +69,32 @@ header p {
     margin: 0;
 }
 
+/* Favicon Style */
+link[rel="icon"] {
+    width: 16px;
+    height: 16px;
+}
+
 /* Navigation styles */
 nav {
-    display: flex;
-    justify-content: center;
     background-color: #007acc;
     padding: 10px;
-    border: 2px solid #005b99;
-    border-radius: 8px;
-    padding: 0.5em 0;
     border-bottom: 4px solid #005b99;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -91,17 +112,6 @@ nav ul li a.active, nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
 /* Main content */
 main {
     padding: 20px;
@@ -116,7 +126,7 @@ main {
 }
 
 main h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: #2e3b4e;
     text-align: center;
 }
@@ -133,47 +143,25 @@ main p {
     line-height: 1.6;
 }
 
-/* Hero Image */
-.hero-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.hero-image:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Image gallery */
+/* Specific Sports Images Styles */
 .image-gallery {
-    display: grid;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-/* Responsive grid layout */
-@media (min-width: 768px) {
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .image-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .image-gallery img {
-    width: 100%;
+    width: 200px; /* Adjust size for better responsiveness */
     height: auto;
-    border: 2px solid #007acc;
-    border-radius: 8px;
+    margin: 10px;
+    border: 3px solid #007acc; /* Add a border for consistency */
+    border-radius: 10px; /* Slight rounding for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a better visual effect */
+    transition: transform 0.3s ease; /* Add hover effect back */
 }
 
 .image-gallery img:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Zoom in on hover */
 }
 
 /* Footer styles */
@@ -183,6 +171,11 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 1rem;
+    width: 100%;
+}
+
+footer address {
+    margin-bottom: 1em;
 }
 
 footer a {
@@ -194,82 +187,47 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Form styles */
-form {
-    background-color: white;
-    padding: 1.5em;
-    border-radius: 5px;
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
 }
 
-/* Fieldset styles */
-fieldset {
-    border: 2px solid #007acc;
-    border-radius: 10px;
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-    position: relative;
+/* Larger Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%; /* Reduce width slightly on tablets */
+    }
+
+    header img.logo {
+        width: 90px; /* Slightly smaller logo */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Decrease spacing between nav items */
+    }
 }
 
-legend {
-    font-weight: 700;
-    color: #007acc;
-    font-size: 1.2rem;
-    margin-bottom: 0.5em;
-    background: #f4f4f9;
-    padding: 0 0.5em;
-    position: absolute;
-    top: -0.8em;
-    left: 1em;
-}
+/* Very Small Screens */
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
 
-/* Labels and inputs */
-label {
-    display: block;
-    margin-bottom: 0.5em;
-    font-size: 1rem;
-}
+    header h1 {
+        font-size: 1.5rem; /* Make header text smaller */
+    }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    width: 100%;
-    padding: 0.75em;
-    margin-bottom: 1.5em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Checkbox and radio group styling */
-.radio-group, .checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.radio-item, .checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75em;
-}
-
-input[type="radio"], input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    cursor: pointer;
-}
-
-/* Submit button */
-.submit-button {
-    background-color: #007acc;
-    color: white;
-    padding: 1em;
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 700;
+    .image-gallery img {
+        width: 150px; /* Reduce image sizes for smaller screens */
+    }
 }
