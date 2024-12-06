@@ -251,24 +251,9 @@ footer a:hover {
     }
 }
 
-@media (max-width: 768px) {
+/* Simple Media Query for Testing */
+@media (max-width: 800px) {
     body {
-        font-size: 0.9rem;
-    }
-
-    .container {
-        padding: 5%;
-    }
-}
-
-@media (max-width: 600px) {
-    header, footer {
-        text-align: left;
-        padding: 15px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
+        background-color: #e0e0e0; /* Simple style to easily see if media query is active */
     }
 }
