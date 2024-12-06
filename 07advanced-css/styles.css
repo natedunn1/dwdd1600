@@ -231,29 +231,3 @@ footer a:hover {
         width: 150px; /* Reduce image sizes for smaller screens */
     }
 }
-
-/* Additional Media Queries for Autograder Detection */
-@media (max-width: 600px) {
-    body {
-        background-color: #f0f0f0;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
-
-/* Simple Media Query for Testing */
-@media (max-width: 800px) {
-    body {
-        background-color: #e0e0e0; /* Simple style to easily see if media query is active */
-    }
-}
