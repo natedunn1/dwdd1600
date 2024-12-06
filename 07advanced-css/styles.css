@@ -1,399 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Your Name or Company Name">
-    <meta name="description" content="Welcome to our hub for Utah sports, where we cover everything from BYU to the Jazz and RSL.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NateDunnSports - Utah Sports Coverage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        /* General styles */
-        * {
-            box-sizing: border-box; /* Set box model to border-box */
-        }
+/* General styles */
+* {
+    box-sizing: border-box; /* Set box model to border-box */
+}
 
-        html, body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            min-height: 100%;
-        }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100%;
+}
 
-        body {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.6;
-        }
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
 
-        /* Add favicon for all pages */
-        :root {
-            --favicon-url: url('favicon.ico');
-        }
+/* Header styles */
+header {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 20px;
+    border-bottom: 4px solid #007acc;
+    display: flex; /* Flexbox for positioning */
+    align-items: center;
+    justify-content: center; /* Aligns the image and text side-by-side */
+    text-align: center;
+}
 
-        /* Header styles */
-        header {
-            background-color: #2e3b4e;
-            color: white;
-            padding: 20px;
-            border-bottom: 4px solid #007acc;
-            display: flex; /* Flexbox for positioning */
-            align-items: center;
-            justify-content: center; /* Aligns the image and text side-by-side */
-            text-align: center;
-        }
+header img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
 
-        header img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 0;
-        }
+header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
 
-        header p {
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #007acc;
+    padding: 10px;
+    border: 2px solid #005b99;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
 
-        /* Navigation styles */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #007acc;
-            padding: 10px;
-            border: 2px solid #005b99;
-            border-radius: 8px;
-            flex-wrap: wrap;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
+nav ul li {
+    margin: 0 15px;
+    flex-grow: 1;
+}
 
-        nav ul li {
-            margin: 0 15px;
-            flex-grow: 1;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 700;
-            padding: 10px;
-            display: block;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
+nav ul li a.active, nav ul li a:hover {
+    background-color: #005b99;
+    border-radius: 5px;
+}
 
-        nav ul li a.active, nav ul li a:hover {
-            background-color: #005b99;
-            border-radius: 5px;
-        }
+/* Main content */
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #f4f4f9, #e0e7ff); /* CSS Gradient for main content */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
 
-        /* Main content */
-        main {
-            flex: 1;
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff); /* CSS Gradient for main content */
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-        }
+main h1 {
+    font-size: 2rem;
+    color: #2e3b4e;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        main h1 {
-            font-size: 2rem;
-            color: #2e3b4e;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+main h2 {
+    font-size: 1.5rem;
+    color: #007acc;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-        main h2 {
-            font-size: 1.5rem;
-            color: #007acc;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+main p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
-        main p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
+/* Hero Image */
+.hero-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
 
-        /* Hero Image */
-        .hero-image {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
+.hero-image:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hover drop shadow */
+}
 
-        .hero-image:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hover drop shadow */
-        }
+/* Image gallery */
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
 
-        /* Image gallery */
-        .image-gallery {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 15px;
-        }
+.gallery img:hover, .hero-image:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect to gallery images on hover */
+}
 
-        .gallery img:hover, .hero-image:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect to gallery images on hover */
-        }
+/* Border and Border-radius for main sections */
+section {
+    border: 2px solid #007acc; /* Adds blue border to sections */
+    border-radius: 15px; /* Rounds the corners of the sections */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
 
-        /* Border and Border-radius for main sections */
-        section {
-            border: 2px solid #007acc; /* Adds blue border to sections */
-            border-radius: 15px; /* Rounds the corners of the sections */
-            padding: 15px;
-            margin-bottom: 20px;
-            background-color: #ffffff;
-        }
+/* About Us Section - Light Blue Background */
+section#AboutUs {
+    background-color: #e6f0ff; /* Light blue background for About Us section */
+}
 
-        /* About Us Section - Light Blue Background */
-        section#AboutUs {
-            background-color: #e6f0ff; /* Light blue background for About Us section */
-        }
+/* Form styles */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
 
-        /* Form styles */
-        form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-        }
+fieldset {
+    margin-bottom: 20px;
+    border: 2px solid #007acc;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
 
-        fieldset {
-            margin-bottom: 20px;
-            border: 2px solid #007acc;
-            border-radius: 5px;
-            padding: 15px;
-            box-sizing: border-box;
-        }
+legend {
+    font-weight: 700;
+    color: #007acc;
+    padding: 0 10px;
+}
 
-        legend {
-            font-weight: 700;
-            color: #007acc;
-            padding: 0 10px;
-        }
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
 
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
 
-        .checkbox-group, .radio-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+input[type="radio"],
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 
-        input[type="radio"],
-        input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
+.submit-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
 
-        .submit-button {
-            background-color: #007acc;
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
+.submit-button:hover {
+    background-color: #005b99;
+}
 
-        .submit-button:hover {
-            background-color: #005b99;
-        }
+/* Footer styles */
+footer {
+    background-color: #2e3b4e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        /* Footer styles */
-        footer {
-            background-color: #2e3b4e;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: sticky;
-            bottom: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
 
-        footer a {
-            color: #00d4ff;
-            text-decoration: none;
-        }
+footer a:hover {
+    text-decoration: underline;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        @media (min-width: 769px) {
-            nav ul {
-                flex-direction: row;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Welcome header -->
-    <header>
-        <img src="images/headerfinal.jpg" alt="Welcome to Utah Sports." class="logo">
-        <div>
-            <h1>NateDunnSports</h1>
-            <p>Covering ALL things Utah Sports</p>
-        </div>
-    </header>
-
-    <!-- Navigation menu -->
-    <nav>
-        <ul>
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="byu.html">BYU</a></li>
-            <li><a href="UtahUtes.html">Utah Utes</a></li>
-            <li><a href="UtahJazz.html">Utah Jazz</a></li>
-            <li><a href="UtahHockeyClub.html">Utah Hockey Club</a></li>
-            <li><a href="RSL.html">RSL</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main content area -->
-    <main>
-        <img src="images/jimmcmahon.png" alt="Hero Image" class="hero-image">
-        
-        <h1>Welcome to NateDunnSports</h1>
-        <p>We're excited to bring you all the latest and greatest in Utah sports!</p>
-
-        <section id="BYU">
-            <h2>BYU</h2>
-            <p>Check out what's happening with BYU sports teams, their big wins, and future games.</p>
-            <div class="image-gallery">
-                <img src="images/BYU.png" alt="BYU">
-                <img src="images/byu1.jpg" alt="BYU">
-            </div>
-        </section>
-
-        <section id="UtahUtes">
-            <h2>Utah Utes</h2>
-            <p>Check out what's happening with Utah sports teams, their big wins, and future games.</p>
-            <div class="image-gallery">
-                <img src="images/UtahUtes.png" alt="Utah Utes">
-                <img src="images/utahutes1.png" alt="Utah Utes">
-            </div>
-        </section>
-
-        <section id="UtahJazz">
-            <h2>Utah Jazz</h2>
-            <p>Stay updated with the latest Utah Jazz news.</p>
-            <div class="image-gallery">
-                <img src="images/UtahJazz.png" alt="Utah Jazz">
-                <img src="images/utahjazz1.png" alt="Utah Jazz">
-            </div>
-        </section>
-
-        <section id="UtahHockeyClub">
-            <h2>Utah Hockey Club</h2>
-            <p>Learn about the Utah Hockey Club.</p>
-            <div class="image-gallery">
-                <img src="images/utahhockeyclub.png" alt="Utah Hockey Club">
-                <img src="images/utahhockeyclub1.png" alt="Utah Hockey Club">
-            </div>
-        </section>
-
-        <section id="RSL">
-            <h2>RSL (Real Salt Lake)</h2>
-            <p>Catch up with the latest news on RSL</p>
-        </section>
-
-        <!-- Additional HTML Elements -->
-        <section id="AboutUs">
-            <h2>About Us</h2>
-            <ul>
-                <li>Dedicated coverage of ALL Utah sports</li>
-                <li>Breaking news and analysis</li>
-                <li>Fan engagement</li>
-            </ul>
-
-            <ol>
-                <li>Read our stories</li>
-                <li>Check daily for updates</li>
-                <li>Follow us on social media @NateDunnKSL</li>
-            </ol>
-
-            <dl>
-                <dt>BYU and Utah:</dt>
-                <dd>BYU and Utah sports, news, and updates.</dd>
-                <dt>Utah Jazz and Utah Hockey Club:</dt>
-                <dd>The latest on Utah's professional teams.</dd>
-                <dt>RSL:</dt>
-                <dd>Updates on RSL.</dd>
-            </dl>
-
-            <p>Stay tuned for more <em>exciting</em> updates and features. <strong>Don’t miss out!</strong></p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <address>
-            NateDunnSports<br>
-            123 Utah Sports Lane<br>
-            Salt Lake City, UT 84101<br>
-            <a href="mailto:info@natedunnsports.com">info@natedunnsports.com</a>
-        </address>
-        <p>&copy; 2024 NateDunnSports. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+@media (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+    }
+}
