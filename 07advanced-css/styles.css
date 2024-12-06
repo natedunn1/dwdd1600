@@ -28,11 +28,10 @@ header, nav {
     width: 100%; /* Full width */
 }
 
-
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 15px; 
+    padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,12 +67,6 @@ header p {
     margin: 0;
 }
 
-/* Favicon Style */
-link[rel="icon"] {
-    width: 16px;
-    height: 16px;
-}
-
 /* Navigation styles */
 nav {
     background-color: #007acc;
@@ -84,7 +77,7 @@ nav {
 
 nav ul {
     list-style: none;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -150,17 +143,18 @@ main p {
 }
 
 .image-gallery img {
-    width: 200px; 
+    width: 200px;
     height: auto;
     margin: 10px;
-    border: 3px solid #007acc; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease; 
+    border: 3px solid #007acc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
+}
 
 /* Footer styles */
 footer {
@@ -192,26 +186,32 @@ footer a:hover {
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack navigation vertically */
+        align-items: center; /* Center the links */
     }
+
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0; /* Add space between items */
+    }
+
+    nav ul li a {
+        padding: 10px 20px; /* Increase touch-friendly area */
+        font-size: 1rem; /* Adjust font size */
     }
 }
 
 /* Larger Tablets and Small Desktops */
 @media (min-width: 769px) and (max-width: 1024px) {
     .container {
-        max-width: 90%; 
+        max-width: 90%;
     }
 
     header img.logo {
-        width: 90px; 
+        width: 90px;
     }
 
     nav ul li {
-        margin: 0 10px; 
+        margin: 0 10px;
     }
 }
 
@@ -222,10 +222,10 @@ footer a:hover {
     }
 
     header h1 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .image-gallery img {
-        width: 150px; 
+        width: 150px;
     }
 }
