@@ -1,8 +1,4 @@
 /* General styles */
-* {
-    box-sizing: border-box;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -18,48 +14,12 @@ body {
     line-height: 1.6;
 }
 
-/* Width Control */
-header, nav, main, footer {
-    margin: 0 auto;
-}
-
-/* Full-width header and navigation */
-header, nav {
-    width: 100%; /* Full width */
-}
-
-/* Add a container for centering content */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px; /* Optional for better responsiveness */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Header styles */
 header {
     background-color: #2e3b4e;
     color: white;
     text-align: center;
     padding: 20px;
     border-bottom: 4px solid #007acc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header img.logo {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
 }
 
 header h1 {
@@ -69,63 +29,49 @@ header h1 {
 }
 
 header p {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
 /* Navigation styles */
 nav {
-    background-color: #007acc;
-    padding: 10px;
-    border-bottom: 4px solid #005b99;
-}
-
-nav .container {
-    display: flex;
-    justify-content: center;
+    background-color: #007acc; /* Match the navigation color from the first screenshot */
+    padding: 0.5em 0;
+    border-bottom: 4px solid #005b99; /* Add border-bottom for a consistent visual style */
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1.5em;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: white; /* Ensure text color is white */
     font-weight: 700;
-    padding: 10px;
-    transition: background-color 0.3s ease;
     font-size: 1rem;
     padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a.active, nav ul li a:hover {
-    background-color: #005b99;
+nav ul li a:hover {
+    background-color: #005b99; /* Add hover effect for consistency */
     border-radius: 5px;
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
+nav ul li a.active {
+    background-color: #005b99; /* Active link background */
+    border-radius: 5px;
 }
 
-/* Main content */
 main {
-    padding: 20px;
-    background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
     flex: 1;
     max-width: 800px;
     margin: 20px auto;
@@ -135,53 +81,89 @@ main {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-main h1 {
-    font-size: 2rem;
-    color: #2e3b4e;
-    text-align: center;
+form {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 5px;
 }
 
-main h2 {
-    font-size: 1.5rem;
-    color: #007acc;
+/* Fieldset styles */
+fieldset {
+    border: 2px solid #007acc; /* Match border size to the example page */
+    border-radius: 10px; /* Larger rounded corners */
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+legend {
     font-weight: 700;
-    margin-bottom: 10px;
+    color: #007acc;
+    font-size: 1.2rem; /* Larger font */
+    margin-bottom: 0.5em; /* Add space below the legend */
+    background: #f4f4f9; /* Match background color */
+    padding: 0 0.5em; /* Add padding to prevent overlap with the border */
+    position: absolute;
+    top: -0.8em;
+    left: 1em;
 }
 
-main p {
+/* Labels and inputs */
+label {
+    display: block;
+    margin-bottom: 0.5em;
     font-size: 1rem;
-    line-height: 1.6;
 }
 
-/* Hero Image */
-.hero-image {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure borders are included in the width */
 }
 
-/* Footer styles */
+/* Checkbox and radio group styling */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 1em; /* Add spacing between items */
+}
+
+.radio-item, .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Submit button */
+.submit-button {
+    background-color: #007acc;
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 footer {
+    text-align: center;
+    padding: 1em;
     background-color: #2e3b4e;
     color: white;
-    text-align: center;
-    padding: 15px;
     font-size: 1rem;
-    width: 100%;
-}
-
-footer .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-footer a {
-    color: #00d4ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
