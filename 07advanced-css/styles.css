@@ -50,12 +50,6 @@ header {
     justify-content: center;
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 header img.logo {
     width: 100px;
     height: 100px;
@@ -73,6 +67,12 @@ header p {
     margin: 0;
 }
 
+/* Favicon Style */
+link[rel="icon"] {
+    width: 16px;
+    height: 16px;
+}
+
 /* Navigation styles */
 nav {
     background-color: #007acc;
@@ -80,14 +80,10 @@ nav {
     border-bottom: 4px solid #005b99;
 }
 
-nav .container {
-    display: flex;
-    justify-content: center;
-}
-
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -155,7 +151,7 @@ main p {
 
 /* Specific Sports Images Styles */
 .image-gallery img {
-    width: 150px; /* Set to a consistent size */
+    width: 300px; /* Set to a larger consistent size */
     height: auto;
     margin: 10px;
     border: 3px solid #007acc; /* Add a border for consistency */
@@ -173,10 +169,8 @@ footer {
     width: 100%;
 }
 
-footer .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
+footer address {
+    margin-bottom: 1em;
 }
 
 footer a {
